@@ -12,6 +12,7 @@ var Portfolio = function (_React$Component) {
   function Portfolio(props) {
     _classCallCheck(this, Portfolio);
 
+    // Initialize state
     var _this = _possibleConstructorReturn(this, (Portfolio.__proto__ || Object.getPrototypeOf(Portfolio)).call(this, props));
 
     _this.state = {
@@ -39,12 +40,17 @@ var Portfolio = function (_React$Component) {
       }
 
     };
+
+    // Bind methods
     _this.removeStock = _this.removeStock.bind(_this);
     _this.handleChange = _this.handleChange.bind(_this);
     _this.handleFormChange = _this.handleFormChange.bind(_this);
     _this.addStock = _this.addStock.bind(_this);
     return _this;
   }
+
+  // Methods
+
 
   _createClass(Portfolio, [{
     key: 'handleChange',
@@ -92,6 +98,9 @@ var Portfolio = function (_React$Component) {
       });
       // reset form to empty
     }
+
+    // Render
+
   }, {
     key: 'render',
     value: function render() {

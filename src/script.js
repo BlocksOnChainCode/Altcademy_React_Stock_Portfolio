@@ -1,6 +1,7 @@
 class Portfolio extends React.Component {
   constructor(props) {
     super(props);
+    // Initialize state
     this.state = {
       portfolio: [
         {
@@ -28,12 +29,15 @@ class Portfolio extends React.Component {
       },
 
     };
+
+    // Bind methods
     this.removeStock = this.removeStock.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleFormChange = this.handleFormChange.bind(this);
     this.addStock = this.addStock.bind(this);
   }
 
+  // Methods
   handleChange(event, index) {
     const portfolio = this.state.portfolio.slice(); // shallow copy
     const { name, value } = event.target;
@@ -69,7 +73,8 @@ class Portfolio extends React.Component {
     });
     // reset form to empty
   }
-
+ 
+  // Render
   render() {
     const { portfolio } = this.state;
     const { form } = this.state;
@@ -106,7 +111,7 @@ class Portfolio extends React.Component {
                   const market_value = shares_owned * market_price;
                   const unrealized_gain_loss = market_value - shares_owned * cost_per_share;
                   // Adopting the underscore_style for consistency
-
+                  
                   return (
                     <tr key={index}>
                       <td>{name}</td>
