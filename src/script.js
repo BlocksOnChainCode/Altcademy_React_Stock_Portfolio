@@ -1,7 +1,9 @@
+// React stock portfolio tracker using class components
 class Portfolio extends React.Component {
+  // ? Constructor
   constructor(props) {
     super(props);
-    // Initialize state
+    // ? Initialize state with portfolio data and form data
     this.state = {
       portfolio: [
         {
@@ -30,14 +32,15 @@ class Portfolio extends React.Component {
 
     };
 
-    // Bind methods
+    // ! Bind methods
+    // ? Bind methods to the class instance so that they can access the state
     this.removeStock = this.removeStock.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleFormChange = this.handleFormChange.bind(this);
-    this.addStock = this.addStock.bind(this);
+    this.addStock = this.addStock.bind(this); 
   }
 
-  // Methods
+  // ! Methods
   handleChange(event, index) {
     const portfolio = this.state.portfolio.slice(); // shallow copy
     const { name, value } = event.target;

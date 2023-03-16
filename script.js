@@ -6,13 +6,15 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+// React stock portfolio tracker using class components
 var Portfolio = function (_React$Component) {
   _inherits(Portfolio, _React$Component);
 
+  // ? Constructor
   function Portfolio(props) {
     _classCallCheck(this, Portfolio);
 
-    // Initialize state
+    // ? Initialize state with portfolio data and form data
     var _this = _possibleConstructorReturn(this, (Portfolio.__proto__ || Object.getPrototypeOf(Portfolio)).call(this, props));
 
     _this.state = {
@@ -41,7 +43,8 @@ var Portfolio = function (_React$Component) {
 
     };
 
-    // Bind methods
+    // ! Bind methods
+    // ? Bind methods to the class instance so that they can access the state
     _this.removeStock = _this.removeStock.bind(_this);
     _this.handleChange = _this.handleChange.bind(_this);
     _this.handleFormChange = _this.handleFormChange.bind(_this);
@@ -49,7 +52,7 @@ var Portfolio = function (_React$Component) {
     return _this;
   }
 
-  // Methods
+  // ! Methods
 
 
   _createClass(Portfolio, [{
